@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        body {
+            background-color: red;
+            color: white;
+        }
+        h2 {
+            font-size: 40px;
+            background-color: black;
+            padding: 10px 20px;
+        }
+        button{
+            background-color: transparent;
+            border-radius:5px ;
+            border-color:black ;
+            font-size: 30px;
+            color: white;
+        }
+
+    </style>
+    <div class="container">
+        <h2>
+            The recent background-color is: <span class="color">Red</span>
+            <button class="change">Change the background-color</button>
+        </h2>
+    </div>
+    <script>
+        
+    const colors=["green","red","blue","green","orange"];
+    var text=document.querySelector('.color');
+    var button=document.querySelector('.change');
+    
+    
+    button.addEventListener('click', function(){
+        var final= colors[smqna()];
+        document.body.style.backgroundColor= final;
+        text.textContent=final;
+        function smqna(){
+        return Math.floor(Math.random()* colors.length);
+        }
+        })
+    
+    </script>
+    
+</body>
+</html>
